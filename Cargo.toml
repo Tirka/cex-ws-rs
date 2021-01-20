@@ -1,0 +1,18 @@
+[package]
+name = "cex-ws-rs"
+version = "0.0.0"
+authors = ["Maksim Vykhota <m.vykhota@protonmail.com>"]
+edition = "2018"
+license = "MIT"
+
+[dependencies]
+sha2 = "0.9.2"
+hmac = "0.10.1"
+
+[dependencies.serde]
+version = "1.0"
+features = ["derive"]
+
+[dependencies.serde_json]
+version = "1.0"
+features = ["preserve_order"]
