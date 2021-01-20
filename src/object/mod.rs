@@ -31,11 +31,12 @@ impl CexObject {
     }
 }
 
-// impl Into<tungstenite::Message> for CexObject {
-//     fn into(self) -> tungstenite::Message {
-//         tungstenite::Message::Text(self.0.to_string())
-//     }
-// }
+#[cfg(feature = "tungstenite")]
+impl Into<tungstenite::Message> for CexObject {
+    fn into(self) -> tungstenite::Message {
+        tungstenite::Message::Text(self.0.to_string())
+    }
+}
 
 pub type Event = str;
 // Protocol messages
